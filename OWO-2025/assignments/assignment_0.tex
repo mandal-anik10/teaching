@@ -1,0 +1,122 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx, geometry, hyperref, wrapfig}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{silver}{RGB}{200,200,200}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+ \geometry{
+ a4paper,
+ total={175mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+
+\input{tex-resources/#defs}
+\input{tex-resources/#mathDef}
+ 
+\title{OWO-GAship}
+\author{Anik Mandal}
+\date{January 2025}
+\pagenumbering{arabic}
+
+%====================================================================================================
+\begin{document}
+
+\begin{minipage}[t][][c]{0.1\textwidth}
+    \begin{flushleft}
+        \includegraphics[height=2cm]{tex-resources/Ashoka Logo.png}
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t][][c]{0.85\textwidth}
+    \begin{center}
+        {\LARGE Oscillations, Wave and Optics}\\ \vspace{0.5em}
+        \textsc{(Spring 2025)}\\
+        \vspace{1em}
+        \textbf{\Large ASSIGNMENT-0} \\
+    \end{center}
+\end{minipage}
+\vspace{10pt}\\
+\rule[0em]{\textwidth}{0.75pt}
+
+\flushleft{Topics: Basic Math (Calculus, Taylor Series, Fourier Series, ODE)}\hfill 
+Total Marks: 50   \\
+\flushleft{Date: 22nd Jan, 2024}\hfill
+\fbox{\textbf{\large 
+Due: 23rd Feb, 2024} (EoD)}\\
+\vspace{.2cm}
+\rule[0em]{\textwidth}{1.75pt}
+\vspace{-1cm}
+%====================================================================================================
+%====================================================================================================
+
+\section*{Problem-1 \hfill \textbf{[10]}}
+\textbf{(a)} Solve $4y'' + 4y' + 37y=0$ and find y(x) for the given boundary conditions: \\
+(i) $y(x=0)=0$,(ii) $y(x=\frac{\pi}{6})=exp(-\frac{\pi^2}{12})$.\\
+Crosscheck the solution; check whether your solution satisfies the ODE.\hfill \textbf{3+2}\\
+
+\textbf{(b)} Make a hand-drawn plot of the solution in the x-y plane using the reference informations:\\
+(i) $exp(-\frac{1}{2})\approx 0.6$, (ii) $exp(-\frac{5}{4})\approx 0.3$, (iii) $exp(-\frac{9}{4})\approx 0.1$\\
+Also briefly mention how you are using the provided informations for plotting. \hfill\textbf{2+1}\\
+
+\textbf{(c)} Taylor expand the solution about x=0. (\textit{Error/deviation of the order $x^5$is acceptable}).\\
+Also, estimate the leading order error term at x=1. \hfill \textbf{2}
+
+%====================================================================================================
+\section*{Problem-2 \hfill \textbf{[10]}}
+\textbf{(a)} (i) $x=sint$, (ii) $y=cos2t$\\ 
+plot these two equations in the t-x and t-y planes, respectively. (\textit{In range $t=[0, 2\pi]$}).\hfill \textbf{2+2}\\
+\textbf{(b)} For a constant t, you will get the x-value and y-value using those two equations.
+Use a set of t-values to get a set of x-values and y-values. 
+Use those x-values and y-values to find the trajectory of the particle in the x-y plane.\hfill\textbf{3}\\
+\textbf{(c)} You can also use the trigonometric identities to solve those two equations for t 
+to get y as a function of x. Plot that function in the respective limits of x and y.
+And check whether the plot is equivalent to the plot in section-(b).\hfill\textbf{3}
+
+%====================================================================================================
+\section*{Problem-3 \hfill \textbf{[10]}}
+\textbf{(a)} Integrate the function $f(x) = x^2$ for the range of $x=[-\pi, \pi]$.\hfill\textbf{1}\\
+\textbf{(b)} considering $f(x)$ to be periodic, that means $f(x + 2\pi) = f(x)$.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=.25]{figs/a0-p3-x^2fourier.jpeg}
+\end{figure}
+
+Find the Fourier series of the function. Should you need to evaluate the sine integral? \hfill\textbf{3}\\
+\textbf{(c)} Determine the number of terms n in the Fourier series expansion such that the leading-order
+error is less than $0.1\%$ of the value of the truncated Taylor series at $x=\pi$.\hfill\textbf{4}\\
+\textbf{(d)} Integrate the truncated Fourier series in the same limit of x and determine the
+deviation with respect to the integration result at part-(a). \hfill\textbf{2}\\
+\textit{[You can use some advanced calculator or write a few lines of code to perform the term-wise summation. 
+Just mention how you are doing the calculations.]}
+
+%====================================================================================================
+\section*{Problem-4: Calculate Integrals \hfill \textbf{[10]}}
+\begin{enumerate}
+    \item $\int (2cos2x - sin2x)\ e^{-x}\ dx$
+    \item $\int sinx\ sin5x\ cos2x\ dx$
+    \item $\int_{0}^{\infty}sinh3x\ e^{-2x}\ dx$
+    \item $\int_{0}^{\pi}cos2x\ dx$
+    \item $\int_{0}^{\pi}cos^{2}2x\ dx$
+\end{enumerate}
+
+%====================================================================================================
+\section*{Problem-5: Solve the equations and find the roots \hfill \textbf{[6]}}
+\begin{enumerate}
+    \item $\int f(x)\ dx = cos4x + sin^{2}2x -1$ find $f(x)$.
+    \item $\int f(x)\ dx = cos2x\ e^{-x} + t^5$ \textit{[t in independent of x]} find $f(x)$.
+    \item $cos4x + sin^{2}2x-1 = 0$ find roots.
+\end{enumerate}
+%====================================================================================================
+\section*{Problem-6:  \hfill \textbf{[4]}}
+Prove the relation:
+\begin{equation*}
+    cos\omega t  + cos(\omega t- \phi) + cos(\omega t- 2\phi) +...+ cos(\omega t- (n-1)\phi) = 
+    \frac{sin(\frac{n\phi}{2})}{sin(\frac{\phi}{2})}cos(\omega t -\frac{1}{2}(n-1)\phi)
+\end{equation*}\\
+\textit{Hint: Try to use complex definition of $cos\theta$, rearrange the terms and use geometric series formula}.
+
+
+\end{document}
