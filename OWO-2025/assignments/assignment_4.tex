@@ -1,0 +1,161 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+
+\usepackage{graphicx, geometry, hyperref, wrapfig}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{silver}{RGB}{200,200,200}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+ \geometry{
+ a4paper,
+ total={175mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+
+\input{tex-resources/#defs}
+\input{tex-resources/#mathDef}
+ 
+\title{OWO-GAship}
+\author{Anik Mandal}
+\date{January 2025}
+\pagenumbering{arabic}
+
+%====================================================================================================
+\begin{document}
+
+\begin{minipage}[t][][c]{0.1\textwidth}
+    \begin{flushleft}
+        \includegraphics[height=2.5cm]{tex-resources/Ashoka Logo.png}
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t][][c]{0.85\textwidth}
+    \begin{center}
+        {\LARGE Oscillations, Wave and Optics}\\ \vspace{0.5em}
+        \textsc{(Spring 2025)}\\
+        \vspace{1em}
+        \textbf{\Large ASSIGNMENT-4} \\
+    \end{center}
+\end{minipage}
+\vspace{10pt}\\
+\rule[0em]{\textwidth}{0.75pt}
+
+\flushleft{Topics: MATHS | Fourier Returns}\hfill 
+Total Marks: 50   \\
+\flushleft{Date: 1st Apr, 2025}\hfill
+\fbox{\textbf{\large 
+Due: 30th Apr, 2025} (EoD) No extension!}\\
+\vspace{.2cm}
+\rule[0em]{\textwidth}{1.75pt}
+\vspace{-1cm}
+%====================================================================================================
+%====================================================================================================
+\justifying
+
+\section*{Problem-1: \hfill \textbf{[30]}}
+\begin{itemize}
+    \item Make a hand-drawn plot of the given functions.
+    \item Find fourier series of the given functions.
+    \item Plot the truncated fouier series (upto certain terms) using graphing calculators 
+    or programming.
+\end{itemize}
+
+\textbf{(1)} Sawtooth wave, \[ f(x) =
+\begin{cases} 
+x, & \text{for } 0\leq x < \pi \\
+x-2\pi, & \text{for } \pi\leq x <2\pi
+\end{cases}
+\] 
+
+\textbf{(2)} Reverse sawtooth wave, \[ f(x) =
+\begin{cases} 
+-\frac{1}{2}(\pi+x), & \text{for } -\pi\leq x < 0 \\
+\frac{1}{2}(\pi-x), & \text{for } 0\leq x <\pi
+\end{cases}
+\] 
+
+\textbf{(3)} Triangular wave, \[ f(x) =
+\begin{cases} 
+-x, & \text{for } -\pi\leq x < 0 \\
+x, & \text{for } 0\leq x <\pi
+\end{cases}
+\] 
+
+\textbf{(4)} \[ f(x) =
+\begin{cases} 
+4x(1+x), & \text{for } -1\leq x < 0 \\
+4x(1-x), & \text{for } 0\leq x <1
+\end{cases}
+\] 
+
+\textbf{(5)} Full-wave rectifier, \[ f(x) =
+\begin{cases} 
+\sin(\omega t), & \text{for } 0 \leq x < \pi/ \omega \\
+\sin(\omega t), & \text{for } -\pi/\omega \leq x < 0
+\end{cases}
+\] 
+
+\textbf{(6)} Rectangular pulse ($n<\pi$)\[ \delta_n(x) =
+\begin{cases} 
+n, & \text{for } |x| < \frac{1}{2n} \\
+0, & \text{for } \pi > |x| > \frac{1}{2n}
+\end{cases}
+\] 
+
+\section*{Problem-2: (Arfken 19.2.17) \hfill \textbf{[10]}}
+
+\textbf{(1)} Show that the Dirac delta function $\delta(x-a)$, expanded in a Fourier sine series in
+the half-interval $(0, L)$ $(0 < a < L)$ is given by,
+\begin{align*}
+    \delta(x-a) = \frac{1}{2} \sum_{n=1}^{\infty} sin(\frac{n\pi a}{L})sin(\frac{n\pi x}{L})
+\end{align*}
+Note that this series actually describes $-\delta(x + a) + \delta(x-a)$ in the interval
+$(-L , L)$.\\
+\textbf{(2)} By integrating both sides of the preceding equation from 0 to x, show that the
+cosine expansion of the square wave
+\[ f(x) =
+\begin{cases} 
+0, & \text{for } 0 \leq x < a \\
+1, & \text{for } a \leq x < L,
+\end{cases}
+\] 
+is,
+\[
+f(x) = \frac{2}{\pi} \sum_{n=1}^{\infty} \frac{1}{n} \sin\left(\frac{n\pi a}{L}\right) 
+- \frac{2}{\pi} \sum_{n=1}^{\infty} \frac{1}{n} \sin\left(\frac{n\pi a}{L}\right) 
+\cos\left(\frac{n\pi x}{L}\right),
+\]
+for $0 \leq x < L$.\\
+\textbf{(3)} Show that the term $\frac{2}{\pi}\sum_{n=1}^{\infty}\frac{1}{n}\sin(\frac{n\pi a}{l})$ 
+is the average of f(x) on (0, L)
+\hfill\textbf{(3+4+3)}
+
+\section*{Problem-3: (Arfken 19.2.20) \hfill \textbf{[10]}}
+\textbf{(1)} A string, clamped at x = 0 and at x = L, is vibrating freely. Its motion is described 
+by the wave equation
+\begin{align*}
+    \frac{\partial^2 u(x,t)}{\partial t^2} = v^2 \frac{\partial^2 u(x,t)}{\partial x^2}
+\end{align*}
+Assume a Fourier expansion of the form,
+\[
+u(x, t) = \sum_{n=1}^{\infty} b_n(t) \sin\left(\frac{n\pi x}{L}\right)
+\]
+and determine the coefficients $b_n(t)$. The initial conditions are
+\[
+u(x, 0) = f(x)\ and\ \frac{\partial }{\partial t}u(x, 0) = g(x)
+\]
+Note (but don't care about this now), This is only half the conventional Fourier orthogonality integral interval. However, as long 
+as only the sines are included here, the Sturm-Liouville boundary conditions are still satisfied 
+and the functions are orthogonal.\\
+\textbf{(2)} We assume now that the presence of a resisting medium will damp the vibrations 
+according to the equation
+\begin{align*}
+    \frac{\partial^2 u(x,t)}{\partial t^2} = v^2 \frac{\partial^2 u(x,t)}{\partial x^2} - k \frac{\partial u(x,t)}{\partial t}
+\end{align*}
+Introduce a Fourier expansion similar to above form.
+Again determine the coefficients $b_n(t)$. Take the initial and boundary conditions to be the same 
+as above. Assume the damping to be small $(k^2 < \frac{4n\pi v}{L})$.\\
+\textbf{(3)} Repeat, but assume the damping to be large $(k^2 > \frac{4n\pi v}{L})$. \hfill\textbf{4+3+3}
+\end{document}

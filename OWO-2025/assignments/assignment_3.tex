@@ -1,0 +1,126 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+
+\usepackage{graphicx, geometry, hyperref, wrapfig, amsmath, subcaption}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{silver}{RGB}{200,200,200}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+ \geometry{
+ a4paper,
+ total={175mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+
+\input{tex-resources/#defs}
+\input{tex-resources/#mathDef}
+ 
+\title{OWO-GAship}
+\author{Anik Mandal}
+\date{January 2025}
+\pagenumbering{arabic}
+
+%====================================================================================================
+\begin{document}
+
+\begin{minipage}[t][][c]{0.1\textwidth}
+    \begin{flushleft}
+        \includegraphics[height=2cm]{tex-resources/Ashoka Logo.png}
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t][][c]{0.85\textwidth}
+    \begin{center}
+        {\LARGE Oscillations, Wave and Optics}\\ \vspace{0.5em}
+        \textsc{(Spring 2025)}\\
+        \vspace{1em}
+        \textbf{\Large ASSIGNMENT-3} \\
+    \end{center}
+\end{minipage}
+\vspace{10pt}\\
+\rule[0em]{\textwidth}{0.75pt}
+
+\flushleft{Topics: Longitudinal Standing Waves, Traveling Waves \hfill
+Total : 40 \\
+\flushleft{Date: 3rd Mar, 2025}\hfill
+\fbox{\textbf{\large 
+Due: 16th Mar, 2025} (EoD)}\\
+\vspace{.2cm}
+\rule[0em]{\textwidth}{1.75pt}
+\vspace{-1cm}
+
+%====================================================================================================
+%====================================================================================================
+\justifying
+
+\section*{Part:A | Longitudinal Standing Waves \hfill \textbf{[15]}}
+\noindent
+\textbf{(1)}  A simple model of an ionic crystal consists of a linear array of a great many 
+equally-spaced atoms of alternating masses $M$ and $m$, where $m<M$. The masses are connected by 
+identical chemical bonds that are modeled as springs of spring constant $K$.\\
+
+\textbf{i.} Show that the frequencies of the system's longitudinal modes of vibration either lie in 
+the band 0 to $(2\,K/M)^{1/2}$ or in the band $(2\,K/m)^{1/2}$ to $[2\,K\,(1/M+1/m)]^{1/2}$.\\
+
+\textbf{ii.} Show that, in the long-wavelength limit, modes whose frequencies lie in the lower band 
+are such that neighboring atomics move in the same direction, whereas modes whose frequencies lie 
+in the upper band are such that neighboring atoms move in opposite directions. The lower band is 
+known as the acoustic branch, whereas the upper band is known as the optical branch.
+\hfill \textbf{(10 + 5)}
+
+\section*{Part:B | Traveling Waves \hfill \textbf{[25]}}
+\textbf{(1)} Demonstrate that for a transverse traveling wave propagating on a stretched string,
+\begin{align*}
+    \langle {\cal I}\rangle = v\,\langle {\cal E}\rangle
+\end{align*}
+where $\langle {\cal I}\rangle$ is the mean energy flux along the string due to the wave, 
+$\langle {\cal E}\rangle$ is the mean wave energy per unit length, and $v$ is the phase 
+velocity of the wave.\hfill \textbf{3}\\
+
+\noindent
+\textbf{(2)} A lossy transmission line has a resistance per unit length ${\cal R}$,
+in addition to an inductance per unit length ${\cal L}$, and a capacitance per unit length 
+${\cal C}$. The resistance can be considered to be in series with the inductance.
+
+\textbf{i.} Demonstrate that the Telegrapher's equations generalize to,
+\begin{align*}
+    \frac{\partial V}{\partial t} &=-\frac{1}{\cal C}\frac{\partial I}{\partial x}\\  
+    \frac{\partial I}{\partial t} &=-\frac{\cal R}{\cal L} I - \frac{1}{\cal L}\frac{\partial V}{\partial x}
+\end{align*}
+
+\textbf{ii.} Derive an energy conservation equation of the form
+\begin{align*}
+    \frac{\partial{\cal E}}{\partial t} + \frac{\partial {\cal I}}{\partial x} =- {\cal R}I^{2}
+\end{align*}
+where ${\cal E}$ is the energy per unit length along the line, and ${\cal I}$ the energy flux. 
+Give expressions for ${\cal E}$ and ${\cal I}$. What does the right-hand side of the previous 
+equation represent?
+
+\textbf{iii.}Show that the current obeys the wave-diffusion equation
+\begin{align*}
+    \frac{\partial^{2} I}{\partial t^{2}}+ \frac{\cal R}{\cal L}\frac{\partial I}{\partial t} = \frac{1}{{\cal L}{\cal C}}\frac{\partial^{2} I}{\partial x^{2}}
+\end{align*}
+
+\textbf{iv.} Consider the low-resistance, high-frequency, limit $\omega\gg {\cal R}/{\cal L}$.
+Demonstrate that a signal propagating down the line varies as
+\begin{align*}
+    I(x,t) &\simeq I_0\cos[k(vt-x)]{\rm e}^{-x/\delta}\\	   
+    V(x,t) &\simeq Z I_0\cos[k(vt-x)-1/(k\delta)]{\rm e}^{-x/\delta}
+\end{align*}
+where $k=\omega/v$, $v=1/\sqrt{{\cal L}\,{\cal C}}$, $\delta = 2\,Z/{\cal R}$, 
+and $Z=\sqrt{{\cal L}/{\cal C}}$. Show that $k\,\delta \gg 1$; that is, 
+the decay length of the signal is much longer than its wavelength. 
+Estimate the maximum useful length of a low-resistance, high-frequency, lossy transmission line.
+\hfill\textbf{5+3+3+8}\\
+
+\noindent
+\textbf{(3)} At normal incidence, the mean radiant power from the Sun illuminating one square 
+meter of the Earth's surface is $1.35$ kW. Show that the peak amplitude of the electric component 
+of solar electromagnetic radiation at the Earth's surface is $1010{\rm V}{\rm m}^{-1}$. 
+Demonstrate that the corresponding peak amplitude of the magnetic component is 
+$2.7{\rm A}{\rm m}^{-1}$. \hfill \textbf{3}
+
+
+\end{document}
