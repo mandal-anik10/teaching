@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+
+\usepackage{graphicx, geometry, hyperref, wrapfig}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{silver}{RGB}{200,200,200}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+ \geometry{
+ a4paper,
+ total={175mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+
+\input{tex-resources/#defs}
+\input{tex-resources/#mathDef}
+ 
+\title{OWO-GAship}
+\author{Anik Mandal}
+\date{January 2025}
+\pagenumbering{arabic}
+
+%====================================================================================================
+\begin{document}
+
+\begin{minipage}[t][][c]{0.1\textwidth}
+    \begin{flushleft}
+        \includegraphics[height=2.5cm]{tex-resources/Ashoka Logo.png}
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t][][c]{0.85\textwidth}
+    \begin{center}
+        {\LARGE Oscillations, Wave and Optics}\\ \vspace{0.5em}
+        \textsc{(Spring 2025)}\\
+        \vspace{1em}
+        \textbf{\Large ASSIGNMENT-6} \\
+    \end{center}
+\end{minipage}
+\vspace{10pt}\\
+\rule[0em]{\textwidth}{0.75pt}
+
+\flushleft{Topics: Fresnel Relations}\hfill 
+Total Marks: 40   \\
+\flushleft{Date: 11th Apr, 2025}\hfill
+\fbox{\textbf{\large 
+Due: 20th Apr, 2025} (EoD)}\\
+\vspace{.2cm}
+\rule[0em]{\textwidth}{1.75pt}
+\vspace{-1cm}
+%====================================================================================================
+%====================================================================================================
+\justifying
+
+\section*{Problem \hfill \textbf{[40]}}
+Consider a polarised EMW, travelling in a medium with refractive index $n_1$ insidents 
+on a medium interface at $z=0$ at angle $\theta_i$ as shown in the image. Some fraction of the EMW 
+get reflected back to the same medium but some fraction get refracted into a medium of refractive 
+index $n_2$.($n_2 > n_1$)
+\begin{figure*}[h]
+    \centering
+    \includegraphics*[scale=0.4]{figs/EMW_polarization.png}
+\end{figure*}
+
+\noindent
+Consider the polarization state in which the electric components of the incident, reflected, and 
+refracted waves are all parallel to the interface. \\
+\textbf{1.} Write down the governing Maxwell's equation for the given polarization state.\\
+\textbf{2.} Assume possible solutions and using the boundary condition at the interface, derive
+the Fresnel relations for the polarization in which the electric field is parallel to the interface.\\
+\textbf{3.} Using any graphing calculator draw the reflection and transmission coefficient for 
+incident angle running from $0^{\circ}$ to $90^{\circ}$.\\
+\textbf{4.} Discuss the total internal reflection in details when $n_1>n_2$ and incident angle is 
+more than critical angle for the same state of polarised light. 
+
+
+\end{document}

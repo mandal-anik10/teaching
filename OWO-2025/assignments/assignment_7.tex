@@ -1,0 +1,80 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{ragged2e}
+
+\usepackage{graphicx, geometry, hyperref, wrapfig}
+\usepackage[dvipsnames]{xcolor}
+
+\definecolor{silver}{RGB}{200,200,200}
+\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+ \geometry{
+ a4paper,
+ total={175mm,257mm},
+ left=20mm,
+ top=15mm,
+ }
+
+\input{tex-resources/#defs}
+\input{tex-resources/#mathDef}
+ 
+\title{OWO-GAship}
+\author{Anik Mandal}
+\date{January 2025}
+\pagenumbering{arabic}
+
+%====================================================================================================
+\begin{document}
+
+\begin{minipage}[t][][c]{0.1\textwidth}
+    \begin{flushleft}
+        \includegraphics[height=2.5cm]{tex-resources/Ashoka Logo.png}
+    \end{flushleft}
+\end{minipage}
+\begin{minipage}[t][][c]{0.85\textwidth}
+    \begin{center}
+        {\LARGE Oscillations, Wave and Optics}\\ \vspace{0.5em}
+        \textsc{(Spring 2025)}\\
+        \vspace{1em}
+        \textbf{\Large ASSIGNMENT-7} \\
+    \end{center}
+\end{minipage}
+\vspace{10pt}\\
+\rule[0em]{\textwidth}{0.75pt}
+
+\flushleft{Topics: Wave Optics}\hfill 
+Total Marks: 40   \\
+\flushleft{Date: 26th Apr, 2025}\hfill
+\fbox{\textbf{\large 
+Due: 3rd May, 2025} (EoD) No extension!}\\
+\vspace{.2cm}
+\rule[0em]{\textwidth}{1.75pt}
+\vspace{-1cm}
+%====================================================================================================
+%====================================================================================================
+\justifying
+
+\section*{Problem \hfill \textbf{[40]}}
+\textbf{(1)} A double-slit of slit separation $0.5{\rm mm}$ is illuminated at normal incidence by a 
+parallel beam from a helium-neon laser that emits monochromatic light of wavelength $632.8\,{\rm nm}$.
+A projection screen is located $5\,{\rm m}$ behind the slit. What is the separation of the central 
+interference fringes on the screen?\hfill\textbf{(5)}\\
+
+\noindent
+\textbf{(2)} Consider a double-slit interference/diffraction experiment in which the slit spacing is 
+$d$, and the slit width $\delta$. Show that the intensity of the far-field interference pattern, 
+assuming normal incidence by monochromatic light of wavelength $\lambda $, is
+\begin{align*}
+    {\cal I}(\theta)\propto \cos^2\left(\pi\,\frac{d}{\lambda}\,\sin\theta\right){\rm sinc}^2\left(\pi\,\frac{\delta}{\lambda}\,\sin\theta\right)
+\end{align*}
+Plot the intensity pattern for $d/\lambda=8$ and $\delta /\lambda =2$.\hfill\textbf{(10+5)}\\
+
+\noindent
+\textbf{(3)} Discuss the multi-slit diffraction phenomenon in detail with diagram. \hfill\textbf{(15)}\\
+
+\noindent
+\textbf{(4)} What is the theoretical maximum angular resolving power (in arc seconds) of a conventional
+reflecting telescope with a 12 in main mirror? \hfill\textbf{(5)}\\
+
+
+\end{document}
