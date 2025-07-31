@@ -1,0 +1,24 @@
+\usepackage{amsmath,amsfonts,amssymb,bm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Sets and Notations
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\integers}{\mathbb{Z}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Vectors and Matrices
+% \renewcommand{\vec}[1]{\bm{\mathrm{#1}}}
+\newcommand{\dotp}{\,\boldsymbol{\cdot}\,}
+\newcommand{\grad}[1]{\vec{\nabla}#1}
+\renewcommand{\div}[1]{\vec{\nabla}\!\dotp\!\vec{#1}}
+\newcommand{\curl}[1]{\vec{\nabla}\!\times\!\vec{#1}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Derivatives
+\newcommand{\dv}[2]{\frac{d#1}{d#2}}
+\newcommand{\ndv}[3][2]{\frac{d^{\,#1}#2}{d#3^{\,#1}}}
+
+\newcommand{\pdv}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\npdv}[3][2]{\frac{\partial^{\,#1}#2}{\partial#3^{#1}}}
